@@ -1,0 +1,60 @@
+<html>
+<head>
+<style type="text/css">
+ 
+.demomenu {
+width: 220px;
+padding: 0 0 0 0;
+margin-bottom: 1em;
+font-size: 11px;
+font-weight: normal;
+font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+background-color: #C43209;
+color: #333;
+}
+.linkclass {
+display: block;
+padding: 3px 0px 3px 0.5em;
+border-left: 5px solid #8AA1B6;
+border-right: 5px solid #8AA1B6;
+background-color: #6898d0;
+color: #fff;
+text-decoration: none;
+width: auto;
+}
+.exclass
+{
+width: 220px;
+padding: 0 0 0 0;
+font-size: 11px;
+font-weight: normal;
+font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif;
+background-color: #e5eecc;
+color: 000000;
+display:none;
+}
+</style>
+ 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" language="javascript">
+$(document).ready(function() {
+ 
+$("#link1").click(function () {
+$(".exclass").slideDown("1000");
+ 
+});
+});
+</script>
+ 
+</head>
+<body>
+<div class="demomenu">
+<a class="linkclass" id="link1" href="#">Click here to Slide Down Text</a>
+</div>
+<p class="exclass">This is sliding text example! This is sliding text example!
+This is sliding text example! This is sliding text example!
+This is sliding text example! This is sliding text example! This is sliding text example!
+This is sliding text example!</p>
+ 
+</body>
+</html>

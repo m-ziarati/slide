@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	html ,body{
+		border: 0;
+		outline: 0;
+		margin: 0;
+		padding: 0;
+	}
+	.clearfix{
+		clear: both;
+	}
+	#slide{
+		width: 900px;
+		background-color: orange;
+		padding: 0 60px;
+		position: relative;
+	}
+	#slide .body{
+		overflow: hidden;
+
+	}
+	#slide .bar{
+		width: 300%;
+		border:1px solid red;
+		position: relative;
+		
+
+	}
+	#slide .item{
+		width: 10.44%;
+		margin: 0.33%;
+		height: 130px;
+		background-color: green;
+		float: left;
+
+
+	}
+	#slide .right, #slide .left{
+		position: absolute;
+		width: 30px;
+		height: 30px;
+		margin-top: -15px;
+		top: 50%;
+		left: 15px;
+		background-color: yellow;
+
+	}
+	#slide .right{
+		left: auto;
+		right: 15px;
+
+	}
+	
+
+
+
+
+
+	</style>
+</head>
+<body>
+	<div id="slide">
+		<div class="body">
+		
+			<div class="bar">
+				<div class="item">
+					
+				</div>
+				<div class="item">
+					
+				</div>
+				<div class="item">
+					
+				</div>
+				<div class="item">
+					
+				</div>
+				<div class="item">
+					
+				</div>
+				<div class="item">
+					
+				</div>
+				<div class="item">
+					
+				</div>
+				<div class="item">
+					
+				</div>
+				<div class="item">
+					
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<div class="left" onclick="slideLeft()"></div>
+		<div class="right" onclick="slideRight()"></div>
+	
+	</div>
+</body>
+<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+<script type="text/javascript">
+
+	function slideRight(){
+		var L=$('#slide .bar').css('left');
+		
+		L=parseFloat(L);
+
+		if(L <= -1700)
+		{
+			return;
+		}
+
+		$('#slide .bar').animate({'left':'+=-100%'});
+
+	}
+	function slideLeft(){
+		var L=$('#slide .bar').css('left');
+		
+		L=parseFloat(L);
+
+		if(L >= 0)
+		{
+			return;
+		}
+
+		$('#slide .bar').animate({'left':'+=100%'});
+
+	}
+
+
+	$(function(){
+
+
+	})
+</script>
+
+</html>

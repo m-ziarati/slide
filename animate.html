@@ -1,0 +1,35 @@
+<html>
+<head>
+	<title></title>
+<style type="text/css">
+	html,body{
+		outline: 0px;
+		margin: 0px;
+		padding: 0px;
+		border: 0px;
+		}
+	#slide{
+	height: 300px;
+	width: 300px;
+	background-color: orange;
+	position: relative;
+}
+
+</style>
+</head>
+<body>
+	<div  id="slide">
+</div>
+
+</body>
+<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+<script type="text/javascript">
+	
+	
+
+	$(function(){
+
+		$('#slide').animate({'height':'200px','width':'100px','top':'100px'},5000,function(){});
+			})
+</script>
+</html>

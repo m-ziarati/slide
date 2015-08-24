@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	html , body{
+		padding: 0;
+		margin: 0;
+		border: 0;
+		outline: 0
+	}
+	#slide{
+		height: 500px;
+		background-image: url(img/1.jpg); 
+		background-size: cover;
+		position: relative;
+		z-index: 1;
+		padding-top: 1px;
+
+	}
+	#content{
+		height: 500px;
+		background-color: #ddd;
+		padding: 30px;
+		position: relative;
+		z-index: 2;
+		margin-bottom: 120px;
+
+	}
+	#slide .item{
+		background-color: #fff;
+		border-radius: 5px;
+		width: 500px;
+		height: 200px;
+		margin: 150px auto 0 auto;
+		position: relative;
+
+	}
+	#footer{
+		height: 120px;
+		background-color: #111;
+		color: #ddd;
+		text-align: center;
+		line-height: 120px;
+		position: fixed;
+		bottom: 0;
+		z-index: 1;
+		width: 100%;
+
+	}
+
+
+
+
+	</style>
+</head>
+<body>
+	<div id="slide">
+		<div class="item"></div>
+	</div>
+	<div id="content">hello</div>
+	<div id="footer"> 1393-copyright&copy</div>
+</body>
+<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+<script type="text/javascript">
+	
+	$(function(){
+		
+		$(window).scroll(function(){
+			
+			var st =$(window).scrollTop();
+
+			/*$('#content').html(st);*/
+
+			st/=2;
+
+			$('#slide').css('top' ,st+'px');
+
+			st/=2;
+
+			$('#slide .item').css('top' ,st+'px');
+
+
+
+
+
+		})
+
+
+
+
+})
+
+</script>
+</html>

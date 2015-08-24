@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet"  href="font-awesome-4.2.0/css/font-awesome.min.css">
+	<style type="text/css">
+		html, body{
+			padding: 0;
+			margin: 0;
+			outline: 0;
+			border: 0;
+		}
+		@font-face{
+			font-family: SourceSansPro ;
+			src: url(font/SourceSansPro-ExtraLight.otf);
+
+		}
+		body{
+			font-family: SourceSansPro ;
+		}
+		.wrapper{
+			width: 1000px;
+			margin: auto;
+			/*background-color: yellow;*/
+		}
+		.clearfix{
+			clear: both;
+		}
+		#head{
+			background-image: url(img/laravel/header.jpg);
+			background-size: cover;
+			height: 600px;
+			position: relative;
+			padding-top: 1px;
+			z-index: 1;
+
+		}
+		#head .tagline{
+			padding-top: 120px;
+			text-align: center;
+
+		}
+		#head .tagline h2{
+			color: #AD4844;
+			font-size: 20px;
+			text-transform: uppercase;
+			font-weight: bold;
+			margin: 0;
+			
+		}
+		#head .tagline h1{
+			color: #fff;
+			font-size: 48px;
+			font-weight: 200;
+			font-family: SourceSansPro;
+			text-transform: uppercase;
+			margin: 0;
+			
+		}
+		#head #link{
+			text-align: center;
+			padding-top: 50px;
+		}
+		#head #link .link-button{
+			display: inline-block;
+			text-decoration: none;
+			border-radius: 3px;
+			background-color: #AD4844; 
+			height: 24px;
+			color: #fff;
+			padding: 15px 25px;
+			font-weight: bold;
+			font-size: 19px;
+
+		}
+		#head #link .link-button:hover{
+			background-color: #EB6363;
+		}
+		#head #sublime-code{
+			background-image: url(img/laravel/sublime-inner.png);
+			background-size: cover;
+			height: 315px;
+			border-radius: 10px;
+			width: 100%;
+			margin: 0 auto;
+			margin-top: 50px;
+			position: relative;
+		}
+		#menu-bar{
+			height: 65px;
+			background-color: #FEFEFE;
+			line-height: 65px;
+			position: relative;
+			z-index: 2;
+			
+			
+		}
+		#menu-bar.fixed{
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+
+		}
+		#menu-bar #left{
+			float: left;
+
+		}
+		#menu-bar #right{
+			float: right;
+		}
+		#menu-bar  .link-menu , #bottom-menu .link-menu{
+			text-decoration: none;
+			font-size: 12px;
+			padding-right: 25px;
+			color: #B1B1B1;
+			font-weight: bold;
+
+		}
+		#menu-bar .link-menu , #bottom-menu .link-menu:first-child{
+			color: #F5827D;
+
+		}
+		#menu-bar .link-menu , #bottom-menu .link-menu:hover{
+			color: #F5827D;
+		}
+		#menu-bar img ,#bottom-menu img{
+			padding-top: 20px;
+		}
+		#content{
+			/*height: 420px;*/
+			background-color: #F5F5F5;
+			/*padding-top: 40px;*/
+			z-index: 2;
+			position: relative;
+
+
+		}
+		#content .item{
+			width: 23.5%;
+			margin-left: 2%;
+			float: right;
+		}
+		#content .item:last-child{
+			margin-left: 0;
+		}
+		#content .item a{
+			font-size: 17px;
+			text-decoration: none;
+			color: #F4645F;
+			font-weight: bolder;
+		}
+		#content .item i{
+			color: #CCCCCC;
+		}
+		#content .item p{
+			color: #454545;
+			font-size: 15px;
+			font-weight: 500;
+		}
+		
+		#animation{
+			background-image: url(img/laravel/quotes.jpg);
+			background-size: cover;
+			height: 191px;
+			padding-top: 60px;
+			
+		}
+		 #item{
+			text-align: center;
+			position: relative;
+			
+			
+		}
+		#animation .items{
+			font-size: 22px;
+			font-weight: bold;
+			color: #fff;
+
+		}
+		#animation .person{
+			font-size: 18px;
+			color: #fff;
+			padding-top: 50px;
+
+		}
+		#animation .items , #animation .person{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left:0;
+			display: none;
+
+		}
+		
+		#bottom-menu{
+			height: 71px;
+			background-color: #333333;
+			line-height: 71px; 
+			margin-bottom: 50px;
+			position: relative;
+			z-index: 3;
+
+		}
+		#bottom-menu .left{
+			float: left
+		}
+		#bottom-menu .right{
+			float: right
+		}
+		#footer{
+			background-color: #252525;
+			height: 50px;
+			line-height: 50px;
+			position: fixed;
+			bottom: 0;
+			width: 100%;
+			z-index: 1;
+		}
+		#footer span{
+			color: #555555;
+			font-size: 11px;
+			font-weight: 600;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+
+		}
+
+
+
+
+
+
+	</style>
+</head>
+<body>
+	<div id="head">
+		<div class="wrapper">
+			<div class="tagline">
+				<h1>The PHP Framework For Web Artisans.</h1>
+				<h2>PHP That Doesn't Hurt. Code Happy & Enjoy The Fresh Air.</h2>
+			</div>
+			<div id="link">
+				<a href="" class="link-button">QUICKSTAR</a>
+				<a href="" class="link-button">LARACASTS</a>
+				<a href="" class="link-button">LARAVEL FORGE</a>
+			</div>
+				<div id="sublime-code"></div>
+				
+		</div>
+	</div>	
+	
+	<div id="content">
+		<div id="menu-bar">
+			<div class="wrapper">
+				<div id="right">
+					<a href="" class="link-menu">WELCOME</a>
+					<a href="" class="link-menu">DOCUMENTATON</a>
+					<a href="" class="link-menu">API</a>
+					<a href="" class="link-menu">LARACASTS</a>
+					<a href="" class="link-menu">FORGE</a>
+					<a href="" class="link-menu">BLOG</a>
+					<a href="" class="link-menu">COMMUNITY</a>
+				</div>
+				<div id="left">
+					<a href=""><img src="img/laravel/logo-head.png" /></a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<div class="wrapper">
+			<div id="top-content">
+				<div class="item">
+					<h2>
+						<i class="fa fa-check-circle-o"></i>
+						<a href="">Ready For Tomorrow</a>
+					</h2>
+					<p>
+						Build huge enterprise applications,<br/> or simple JSON APIs. Write powerful<br/> controllers, or slim RESTful routes.<br/> Laravel is perfect for jobs of all sizes.
+					</p>
+				</div>
+				<div class="item">
+					<h2>
+						<i class="fa fa-pencil-square-o"></i>
+						<a href="">Beautiful Templating</a>
+					</h2>
+					<p>
+						Use native PHP or the light-weight<br/> Blade templating engine. Blade<br/> provides great template inheritance<br/> and is blazing fast. You'll love it.
+					</p>
+				</div>
+				<div class="item">
+					<h2>
+						<i class="fa fa-area-chart"></i>
+						<a href="">Command Your Data</a>
+					</h2>
+					<p>
+						Ships with the amazing Eloquent<br/>  ORM and a great migration system.<br/>  Works great on MySQL, Postgres,<br/>SQL Server, and SQLite.
+					</p>
+				</div>
+				<div class="item">
+					<h2>
+						<i class="fa fa-random"></i>
+						<a href="">RESTful Routing</a>
+					</h2>
+					<p>
+						Use simple Closures to respond to<br/>requests to your application. It<br/>couldn't be easier to get started<br/>building amazing applications.
+					</p>
+				</div>
+			</div>
+			<div class="bottom-content">
+				<div class="item">
+					<h2>
+						<i class="fa fa-wrench"></i>
+						<a href="">Red,Green,Refactor</a>
+					</h2>
+					<p>
+						Laravel is built with testing in mind.<br/> Stay flexible with the IoC container,<br/> and run your tests with PHPUnit.<br/> Don't worry... it's easier than you<br/> think. 
+					</p>
+				</div>
+				<div class="item">
+					<h2>
+						<i class="fa fa-users"></i>
+						<a href="">Great Community</a>
+					</h2>
+					<p>
+						Whether you're a PHP beginner or<br/> architecture astronaut, you'll fit right<br/> in. Discuss ideas in the IRC chat<br/> room, or post questions in the<br/> forum.
+					</p>
+				</div>
+				<div class="item">
+					<h2>
+						<i class="fa fa-star-o"></i>
+						<a href="">Composer Powered</a>
+					</h2>
+					<p>
+						Composer is an amazing tool to<br/> manage your application's <br/>third-party packages. Find packages<br/> on Packagist and use them in<br/> seconds.
+					</p>
+				</div>
+				<div class="item">
+					<h2>
+						<i class="fa fa-cog"></i>
+						<a href="">Provent Foundation</a>
+					</h2>
+					<p>
+						Laravel is built on top of several <br/>Symfony components, giving your<br/> application a great foundation of<br/> well-tested and reliable code.
+					</p>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<div id="animation">
+		<div class="wrapper">
+			<div id="item">
+				<div class="items" style="display:block" >
+					Laravel helped me stop reinventing the wheel!
+				</div>
+				<div class="person" style="display:block" >
+					Ryan McDonough
+				</div>
+				<div class="items">
+					Laravel has changed my life. The best framework to quickly turn an ideaintoproduct.
+				</div>
+				<div class="person">
+					Maksim Surguy
+				</div>
+				<div class="items">
+					Laravel reignited my passion for code, reinforced my understanding of MVC, 	and made development fun again!
+				</div>
+				<div class="person">
+					Jozef Maxted
+				</div>
+				<div class="items">
+					Laravel kept me from leaving PHP.
+				</div>
+				<div class="person">
+					Michael Hasselbring
+				</div>
+				
+			</div>
+		</div>
+		
+	</div>
+	<div id="bottom-menu">
+		<div class="wrapper">
+			<div class="right">
+				<a href="" class="link-menu">WELCOME</a>
+				<a href="" class="link-menu">DOCUMENTATON</a>
+				<a href="" class="link-menu">API</a>
+				<a href="" class="link-menu">LARACASTS</a>
+				<a href="" class="link-menu">FORGE</a>
+				<a href="" class="link-menu">BLOG</a>
+			</div>
+			<div class="left">
+				<a href=""><img src="img/laravel/logo-foot.png" /></a>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="wrapper">
+			<span>
+				 laravel is a trademark of taylor otwell.copyright&copy <a href="">taylor otwell.</a>website built whith <i class="fa fa-heart"></i><a href="">ikereativ</a>;responsive by <a href="">tighten co</a>
+			</span>
+		</div>
+	</div>
+
+		
+</body>
+<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+<script type="text/javascript">
+
+	$(function(){
+
+		$(window).scroll(function(){
+
+			var st=$(window).scrollTop();
+			
+			var s=st;
+			
+			st /= 4;
+
+			
+
+			
+
+			$('#head #sublime-code').css('top', st+'px');
+
+			var t=$('#content').offset().top;
+
+			var top=t-s;
+
+			
+
+			if(top<=0){
+				//$('#menu-bar').addClass('fixed');
+				//$('#content').css('padding-top' ,'-65px')
+
+			}
+			else{
+				$('#menu-bar').removeClass('fixed');
+				$('#content').css('padding-top' ,'0')
+			}
+
+		
+		})
+		function animate(){
+
+			
+			$('#animation').animate({'background-position':'+=-1400px'},12000,'linear')
+
+		}
+		animate();
+
+		setInterval(animate,12000);
+
+		
+		
+		
+	})
+		
+	
+
+</script>
+
+</html>

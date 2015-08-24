@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		html, body{
+			padding: 0;
+			margin: 0;
+			outline: 0;
+			border: 0;
+		}
+		
+		#head{
+			background-image: url(img/laravel/header.jpg);
+			background-size: cover;
+			height: 300px;
+		}
+		#content{
+			height: 800px;
+			background-color: #F5F5F5;
+
+			
+		}
+		#menu-bar{
+			height: 65px;
+			background-color: #FEFEFE;
+			
+			
+			
+			
+		}
+		#menu-bar.fixed{
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+
+		}
+
+
+
+	</style>
+</head>
+<body>
+<div id="head"></div>
+<div id="content">
+	<div id="menu-bar"></div>
+	<p>
+						Build huge enterprise applications,<br/> or simple JSON APIs. Write powerful<br/> controllers, or slim RESTful routes.<br/> Laravel is perfect for jobs of all sizes.
+					</p>
+					<p>
+						Use native PHP or the light-weight<br/> Blade templating engine. Blade<br/> provides great template inheritance<br/> and is blazing fast. You'll love it.
+					</p>
+</div>
+</body>
+<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+<script type="text/javascript">
+
+	$(function(){
+
+		$(window).scroll(function(){
+
+			var st=$(window).scrollTop();
+			
+			var t=$('#content').offset().top;
+
+			var top=t-st;
+
+			
+
+			if(top<=0){
+				$('#menu-bar').addClass('fixed');
+				$('#content').css('padding-top' ,'-65px')
+
+			}
+			else{
+				$('#menu-bar').removeClass('fixed');
+				$('#content').css('padding-top' ,'0')
+			}
+	
+	})
+		
+})
+
+</script>
+
+</html>
+
+
+</html>
